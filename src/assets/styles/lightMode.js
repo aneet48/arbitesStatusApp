@@ -1,5 +1,8 @@
-import { Platform, StyleSheet } from "react-native";
+import { Platform, StyleSheet,Dimensions } from "react-native";
 
+var { width } = Dimensions.get("window");
+var box_count = 2;
+var box_height = width / box_count - 100;
 export default StyleSheet.create({
   headerContainer: {
     marginTop: Platform.OS === "ios" ? 0 : -30,
@@ -7,7 +10,8 @@ export default StyleSheet.create({
   },
   container: {
     paddingLeft: 13,
-    paddingRight: 13
+    paddingRight: 13,
+    paddingTop: 10
   },
   firstContainer: {
     flexDirection: "row",
@@ -36,13 +40,32 @@ export default StyleSheet.create({
     paddingBottom: 20
   },
   containerTitle: {
-    fontSize: 18,
+    fontSize: 15,
     color: "#292929",
     fontWeight: "500"
   },
   containerLink: {
+    fontSize: 13,
     color: "#18d492",
     fontWeight: "bold",
     textDecorationLine: "underline"
+  },
+  categorySingle: {
+    height: box_height,
+    width: box_height,
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#f76074",
+    marginBottom: 10
+  },
+  gradientBackground: {},
+  scrollListText: {
+    // padding: 10,
+    fontSize: 30,
+    // color: "#f1d8cf",
+    fontWeight:'bold'
   }
 });

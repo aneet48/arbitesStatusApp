@@ -10,21 +10,27 @@ export default class Home extends Component {
     // };
   }
 
+  _gotoTod=()=>{this.props.navigation.navigate('TOD')}
+
   render() {
     return (
       <View style={styles.firstContainer}>
         <View style={{ flex: 1 }}>
           <TouchableOpacity
             style={{
-              backgroundColor: "#f68787",
+              backgroundColor: "#f76074",
               flex: 1,
               borderRadius: 10,
               justifyContent: "center",
               alignItems: "center"
             }}
+            onPress={this._gotoTod}
           >
             <MatIcons name="format-quote-open" size={24} color="#FFFFFF" />
-            <Text style={styles.firstContainerText}> Thought of the day</Text>
+            <Text style={styles.firstContainerText}>
+              {" "}
+              Thought of the day
+            </Text>
             <MatIcons name="format-quote-close" size={24} color="#FFFFFF" />
           </TouchableOpacity>
         </View>
@@ -41,7 +47,9 @@ export default class Home extends Component {
                 size={24}
                 color="#FFFFFF"
               />
-              <Text style={{ color: "#ffffff", marginLeft: 5, fontSize: 17 }}>
+              <Text
+                style={{ color: "#ffffff", marginLeft: 5, fontSize: 17 }}
+              >
                 Latest
               </Text>
             </View>
@@ -54,7 +62,9 @@ export default class Home extends Component {
           >
             <View style={styles.rightContainerText}>
               <MatIcons name="fire" size={24} color="#FFFFFF" />
-              <Text style={{ color: "#ffffff", fontSize: 17 }}>Popular</Text>
+              <Text style={{ color: "#ffffff", fontSize: 17 }}>
+                Popular
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
