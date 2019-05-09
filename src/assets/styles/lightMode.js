@@ -66,6 +66,28 @@ export default StyleSheet.create({
     // padding: 10,
     fontSize: 30,
     // color: "#f1d8cf",
-    fontWeight:'bold'
+    fontWeight: "bold"
+  },
+  optionBar: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    backgroundColor: "#292929",
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20
+  },
+  option: {
+    flexDirection: "row",
+    marginTop: 20,
+    marginBottom: 20,
+    marginRight: 10,
+    marginLeft: 10
+  },
+  optionText: {
+    color: "#ffffff",
+    marginLeft: 5,
+    fontSize: 12
+  },
+  optionIcon: {
+    color: "#ffffff"
   }
 });
